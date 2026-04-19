@@ -1,0 +1,31 @@
+{
+  "rules": {
+    "events": {
+      ".read": true,
+      ".write": false,
+      "$eventId": {
+        "questions": {
+          ".read": true,
+          "$sessionId": {
+            "$questionId": {
+              ".write": "auth != null",
+              ".validate": "newData.hasChildren(['text', 'authorUid', 'ts']) && newData.child('authorUid').val() === auth.uid"
+            }
+          }
+        },
+        "attendees": {
+          "$uid": {
+            ".read": true,
+            ".write": "auth != null && $uid === auth.uid"
+          }
+        },
+        "crowd": {
+          ".read": true,
+          "$zoneId": {
+            ".write": "auth != null"
+          }
+        }
+      }
+    }
+  }
+}
