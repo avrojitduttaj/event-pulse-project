@@ -1,10 +1,9 @@
 export const formatQuestion = (text) => {
-  if (!text) return "";
-  let clean = text.trim();
-  // Basic moderation / cleaning
-  clean = clean.replace(/[<>]/g, ""); // strip basic html tags
-  if (clean.length > 250) {
-    clean = clean.substring(0, 247) + "...";
-  }
-  return clean;
+  if (!text || typeof text !== 'string') return '';
+  let cleaned = text.trim();
+  if (!cleaned) return '';
+  cleaned = cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
+  if (cleaned.length > 200) cleaned = cleaned.slice(0, 200) + '...';
+  if (!/[.!?]$/.test(cleaned)) cleaned += '?';
+  return cleaned;
 };

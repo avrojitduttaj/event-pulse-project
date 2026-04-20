@@ -1,12 +1,11 @@
-export const crowdScoreToWeight = (density) => {
-  // density is 0-100 or 0-1
-  const norm = density > 1 ? density / 100 : density;
-  return Math.min(Math.max(norm, 0), 1);
+export const crowdToWeight = (count, maxCount) => {
+  if (count < 0) throw new Error('Count cannot be negative');
+  if (maxCount <= 0) throw new Error('Max count must be positive');
+  return Math.min(count / maxCount, 1);
 };
 
-export const getCrowdColor = (density) => {
-  const norm = density > 1 ? density / 100 : density;
-  if (norm < 0.3) return 'teal';
-  if (norm < 0.7) return 'amber';
-  return 'red';
+export const weightToColor = (weight) => {
+  if (weight > 0.75) return 'var(--red)';
+  if (weight > 0.5) return 'var(--amber)';
+  return 'var(--green)';
 };

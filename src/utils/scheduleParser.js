@@ -1,11 +1,11 @@
-export const parseSchedule = (scheduleRaw) => {
-  if (!Array.isArray(scheduleRaw)) return [];
-  return scheduleRaw.map(session => ({
-    id: session.id || Math.random().toString(36).substr(2, 9),
-    title: session.title || "TBA",
-    room: session.room || "TBA",
-    speaker: session.speaker || "TBA",
-    startTime: new Date(session.startTime || Date.now()),
-    capacity: session.capacity || 100
-  })).sort((a, b) => a.startTime - b.startTime);
+export const parseSchedule = (rawSchedule) => {
+  if (!Array.isArray(rawSchedule)) return [];
+  return rawSchedule
+    .filter(session => session && session.title)
+    .map(session => ({
+      ...session,
+      startTime: session.startTime || 'TBD',
+      room: session.room || 'Main Hall',
+      title: session.title.trim(),
+    }));
 };
