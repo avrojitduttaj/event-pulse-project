@@ -220,7 +220,7 @@ npm run dev:all
 http://localhost:5173
 ```
 
-💡 Pro Tip:
+💡 Pro Tip: <br>
 Open two browser windows side-by-side to see real-time syncing + AI re-ranking live.
 
 ---
@@ -282,9 +282,9 @@ Node.js Server (Broker Layer)
 Google Gemini API
 ```
 
-✔ Client never directly accesses Gemini
-✔ Backend protects prompts & logic
-✔ Real-time broadcasts to all users
+✔ Client never directly accesses Gemini <br>
+✔ Backend protects prompts & logic <br>
+✔ Real-time broadcasts to all users <br>
 
 ---
 
@@ -294,15 +294,15 @@ EventPulse is not just another Q&A tool.
 
 It represents a shift toward:
 
-🧠 AI-moderated conversations
-⚡ Instant collaborative experiences
-🎤 Smarter live events
-🧪 Future Improvements
-🎙️ Voice-based question input
-🌍 Multi-language AI ranking
-📊 Speaker analytics dashboard
-🔐 Auth + role-based access
-☁️ Scalable distributed socket clusters
+🧠 AI-moderated conversations <br>
+⚡ Instant collaborative experiences <br>
+🎤 Smarter live events <br>
+🧪 Future Improvements <br>
+🎙️ Voice-based question input <br>
+🌍 Multi-language AI ranking <br>
+📊 Speaker analytics dashboard <br>
+🔐 Auth + role-based access <br>
+☁️ Scalable distributed socket clusters <br>
 
 ---
 
@@ -317,6 +317,6 @@ Built for Google Antigravity Hackathon
 
 If you found this project useful:
 
-⭐ Star the repo
-🍴 Fork it
-🚀 Share it
+⭐ Star the repo <br>
+🍴 Fork it <br>
+🚀 Share it <br>
